@@ -1,0 +1,29 @@
+<section class="video-section">
+  <h2 class="section-title">الدورات</h2>
+
+  <div class="video-grid">
+    <div
+      class="video-card"
+      *ngFor="let video of videos"
+      (click)="openVideo(video.videoUrl)"
+      role="button"
+      tabindex="0"
+    >
+      <div class="thumb">
+        <img [src]="video.thumbnail" [alt]="video.title" />
+        <div class="play-btn"><i class="material-icons">play_circle_filled</i></div>
+      </div>
+
+      <div class="card-body">
+        <p class="title" title="{{ video.title }}">{{ video.title }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-modal" *ngIf="selectedVideo" (click)="closeVideo()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close" (click)="closeVideo()" aria-label="Close">&times;</button>
+      <iframe [src]="selectedVideo" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

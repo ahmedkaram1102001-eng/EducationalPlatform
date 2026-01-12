@@ -1,0 +1,56 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <i class="fas fa-graduation-cap"></i>
+      <h1>تسجيل الدخول إلى مدرستي</h1>
+      <p>الرجاء تسجيل الدخول للمتابعة إلى لوحة التحكم</p>
+    </div>
+
+    <form class="login-form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">البريد الإلكتروني</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="ادخل بريدك الإلكتروني"
+          required
+          class="form-control"
+          [class.error]="errorMessage && !email">
+      </div>
+      <div class="form-group">
+        <label for="password">كلمة المرور</label>
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="ادخل كلمة المرور"
+          required
+          class="form-control"
+          [class.error]="errorMessage && !password">
+      </div>
+      <div class="error-message" *ngIf="errorMessage">
+        <i class="fas fa-exclamation-triangle"></i>
+        {{ errorMessage }}
+      </div>
+      <button type="submit" class="btn btn-primary login-btn" [disabled]="isLoading">
+        <span *ngIf="isLoading" class="spinner">
+          <i class="fas fa-spinner fa-spin"></i>
+        </span>
+        <span *ngIf="!isLoading">تسجيل الدخول</span>
+      </button>
+    </form>
+    <div class="demo-info">
+      <h4>بيانات تجربة (توضيحية):</h4>
+      <p><strong>البريد:</strong> admin@eduhub.com</p>
+      <p><strong>كلمة السر:</strong> password</p>
+    </div>
+    <div class="back-link">
+      <button class="btn btn-link" (click)="goToDashboard()">
+        <i class="fas fa-arrow-left"></i> العودة للصفحة الرئيسية
+      </button>
+    </div>
+  </div>
+</div>

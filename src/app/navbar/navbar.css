@@ -1,0 +1,29 @@
+.custom-nav {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 12px 0;
+  transition: background 0.3s ease;
+}
+
+.navbar .nav-link {
+  color: white !important;
+  font-size: 18px;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #f0ad4e !important; 
+}
+
+.navbar .nav-link.active {
+  color: #ffcc00 !important;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}

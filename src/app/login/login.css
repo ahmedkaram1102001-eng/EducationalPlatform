@@ -1,0 +1,15 @@
+.login-container{ min-height: calc(100vh - 80px); display:flex; align-items:center; justify-content:center; padding: 40px 16px; background: linear-gradient(180deg, rgba(7,18,36,0.03), rgba(7,18,36,0.02)); }
+.login-card{ width: 100%; max-width: 520px; background: var(--surface); border-radius: 18px; box-shadow: 0 12px 34px rgba(3,9,20,0.14); overflow:hidden; padding: 28px; }
+.login-header{ text-align:center; margin-bottom:8px; color: var(--color-primary-900); }
+.login-header i{ font-size:36px; color: var(--color-primary-700); margin-bottom:8px; }
+.login-header h1{ font-weight:800; margin:6px 0; }
+.login-header p{ color:#6b7280; margin:0; }
+.login-form .form-group{ margin-bottom:12px; }
+.form-control{ width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(0,0,0,0.08); }
+.error-message{ color:#b91c1c; display:flex; gap:8px; align-items:center; padding: 8px; }
+.login-btn{ width:100%; margin-top:6px; padding:12px 14px; border-radius: 12px; font-weight:700; }
+.demo-info{ margin-top:14px; font-size:0.9rem; color:#666; }
+.back-link{ margin-top:12px; text-align:center; }
+
+@media (max-width:768px){ .login-card{ padding:18px; } }
+
